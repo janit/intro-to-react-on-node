@@ -6,9 +6,8 @@ import * as ReactDOMServer from 'react-dom/server';
 
 import HelloWorld from './views/HelloWorld';
 
-let name = 'Barbara';
-
 app.use(async ctx => {
+  let name = 'Barbara';
   ctx.body = ReactDOMServer.renderToStaticMarkup(<HelloWorld name={name} />);
 });
 
